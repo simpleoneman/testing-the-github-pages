@@ -1,0 +1,50 @@
+/*
+    Created by Bohdan Kishchak
+    GitHub: https://github.com/simpleoneman
+*/
+
+body {
+    margin: 0;
+    background-color: #1A292C;
+}
+div#circle {
+    background-color: #2E4D50;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: 50vh;
+    margin-top: -150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 2px #162223;
+    animation: moveAround 13s linear infinite normal;
+}
+span {
+    display: block;
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    animation: moveAround 3.5s linear infinite reverse;
+}
+span#git {
+    background: url(../img/git.png);
+    top: 0;
+    left: 112px;
+}
+span#js {
+    background: url(../img/js.png);
+    bottom: 0;
+    left: 112px;
+}
+span:hover {
+    animation-play-state: paused;
+}
+@keyframes moveAround {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
